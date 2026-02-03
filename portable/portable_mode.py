@@ -66,8 +66,8 @@ def setup_portable_wifi(wifi_name, wifi_password):
   subprocess.run(["netplan", "generate"], check=True)
   subprocess.run(["netplan", "apply"], check=True)
 
-  script_content = f"""Wi-Fi name: {wifi_name}
-Wi-Fi passowrd: {wifi_password}
+  script_content = f"""SSID: {wifi_name}
+Passowrd: {wifi_password}
     """
   path = os.path.join(SERVER_DIR, "wifi_credentials.txt")
 
